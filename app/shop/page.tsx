@@ -32,7 +32,7 @@ export default async function ShopPage({
             Votre commande a bien ete enregistree.
           </div>
         ) : null}
-        <form className="coastal-card mb-8 grid gap-4 rounded-[2rem] p-5 lg:grid-cols-[1fr_220px_160px]">
+        <form className="coastal-card mb-8 grid gap-4 rounded-[2rem] p-5 md:grid-cols-[1fr_220px_160px]">
           <Input defaultValue={params?.query} name="query" placeholder="Rechercher un produit" />
           <Select defaultValue={params?.category ?? ""} name="category">
             <option value="">Toutes les categories</option>
@@ -42,7 +42,7 @@ export default async function ShopPage({
               </option>
             ))}
           </Select>
-          <button className="rounded-2xl bg-[var(--color-primary)] px-5 py-3 text-sm font-semibold text-white" type="submit">
+          <button className="rounded-2xl bg-[var(--color-primary)] px-5 text-sm font-semibold text-white" type="submit">
             Filtrer
           </button>
         </form>

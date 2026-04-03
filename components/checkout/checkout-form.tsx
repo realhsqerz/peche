@@ -46,7 +46,7 @@ export function CheckoutForm() {
   }
 
   return (
-    <form action={formAction} className="grid gap-6 xl:grid-cols-[1fr_380px]">
+    <form action={formAction} className="grid gap-6 lg:grid-cols-[1fr_380px]">
       <div className="rounded-[2rem] border border-white/60 bg-white p-6 shadow-[0_35px_100px_-60px_rgba(11,60,93,0.55)]">
         <h2 className="text-2xl font-semibold text-[var(--color-text)]">Informations de livraison</h2>
         <div className="mt-6 grid gap-4 sm:grid-cols-2">
