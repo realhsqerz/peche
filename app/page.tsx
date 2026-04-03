@@ -42,32 +42,32 @@ export default async function HomePage() {
 
   return (
     <StoreShell>
-      <section className="relative overflow-hidden pb-12 pt-10 sm:pb-16 sm:pt-14">
-        <Container className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
+      <section className="relative overflow-hidden pb-10 pt-8 sm:pb-16 sm:pt-14">
+        <Container className="grid items-center gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10">
           <div>
             <Badge>Materiel cotier pour pecheurs du quotidien</Badge>
-            <h1 className="mt-6 max-w-3xl font-serif text-5xl leading-none font-extrabold text-[var(--color-primary)] sm:text-6xl lg:text-7xl">
+            <h1 className="mt-5 max-w-3xl font-serif text-4xl leading-none font-extrabold text-[var(--color-primary)] sm:mt-6 sm:text-6xl lg:text-7xl">
               Plus de produits.
               <br />
               Moins de vitrine trop chic.
             </h1>
-            <p className="mt-6 max-w-2xl text-base leading-8 text-slate-600 sm:text-lg">
+            <p className="mt-5 max-w-2xl text-sm leading-7 text-slate-600 sm:mt-6 sm:text-lg sm:leading-8">
               Peche prend maintenant une direction plus fraiche, plus coloree et plus
               commercante, avec des produits visibles des le premier ecran.
             </p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <ButtonLink href="/shop">
+            <div className="mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:flex-wrap sm:gap-4">
+              <ButtonLink className="w-full sm:w-auto" href="/shop">
                 Voir la boutique
                 <ArrowRight className="ml-2 h-4 w-4" />
               </ButtonLink>
-              <ButtonLink href="/wishlist" variant="secondary">
+              <ButtonLink className="w-full sm:w-auto" href="/wishlist" variant="secondary">
                 Voir les favoris
               </ButtonLink>
             </div>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-7 flex flex-wrap gap-3 sm:mt-8">
               {benefits.slice(0, 3).map(({ title, icon: Icon }) => (
                 <div
-                  className="inline-flex items-center gap-2 rounded-full bg-white/85 px-4 py-2 text-sm font-semibold text-[var(--color-primary)] shadow-[0_18px_44px_-32px_rgba(0,114,184,0.45)]"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-white/85 px-4 py-2 text-center text-sm font-semibold text-[var(--color-primary)] shadow-[0_18px_44px_-32px_rgba(0,114,184,0.45)] sm:w-auto sm:justify-start sm:text-left"
                   key={title}
                 >
                   <Icon className="h-4 w-4" />
@@ -81,17 +81,17 @@ export default async function HomePage() {
             <div className="grid gap-4">
               {supportingProducts.map((product) => (
                 <Link
-                  className="coastal-card glossy-card grid gap-4 rounded-[2rem] p-4 sm:grid-cols-[120px_1fr]"
+                  className="coastal-card glossy-card grid gap-4 rounded-[1.6rem] p-4 sm:grid-cols-[120px_1fr] sm:rounded-[2rem]"
                   href={`/product/${product.id}`}
                   key={product.id}
                 >
-                  <div className="relative h-32 overflow-hidden rounded-[1.5rem]">
+                  <div className="relative h-44 overflow-hidden rounded-[1.25rem] sm:h-32 sm:rounded-[1.5rem]">
                     <Image
                       alt={product.name}
                       className="object-cover"
                       fill
                       priority
-                      sizes="120px"
+                      sizes="(max-width: 640px) 100vw, 120px"
                       src={product.imageUrl}
                     />
                   </div>
@@ -116,7 +116,7 @@ export default async function HomePage() {
                 </Link>
               ))}
 
-              <div className="sand-strip rounded-[2rem] p-5">
+              <div className="sand-strip rounded-[1.6rem] p-5 sm:rounded-[2rem]">
                 <p className="text-xs uppercase tracking-[0.24em] text-cyan-900/50">
                   Achat rapide
                 </p>
