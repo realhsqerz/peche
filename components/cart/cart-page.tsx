@@ -28,7 +28,7 @@ export function CartPage() {
   }
 
   return (
-    <div className="grid gap-8 lg:grid-cols-[1.3fr_0.7fr]">
+    <div className="grid gap-8 xl:grid-cols-[1.3fr_0.7fr]">
       <div className="space-y-5">
         {items.map((item) => (
           <article

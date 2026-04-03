@@ -26,7 +26,7 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-[rgba(21,91,115,0.08)] bg-[rgba(247,251,251,0.84)] backdrop-blur-xl">
-      <Container className="py-3 md:h-20 md:py-0">
+      <Container className="py-3 lg:h-20 lg:py-0">
         <div className="flex items-center justify-between gap-3">
           <Link className="flex min-w-0 items-center gap-3" href="/">
             <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[1.2rem] bg-[linear-gradient(145deg,#1c7088,#4ca7ae)] text-white shadow-[0_18px_42px_-24px_rgba(21,91,115,0.55)] sm:h-12 sm:w-12 sm:rounded-[1.4rem]">
@@ -42,7 +42,7 @@ export function SiteHeader() {
             </div>
           </Link>
 
-          <nav className="hidden items-center gap-7 md:flex">
+          <nav className="hidden items-center gap-6 lg:flex xl:gap-7">
             {links.map((link) => (
               <Link
                 className="text-sm font-semibold text-slate-600 transition hover:text-[var(--color-primary)]"
@@ -56,33 +56,33 @@ export function SiteHeader() {
 
           <div className="flex items-center gap-2 sm:gap-3">
             <Link href="/wishlist">
-              <Button className="relative h-10 w-10 rounded-2xl px-0 sm:h-11 sm:w-auto sm:px-4" variant="secondary">
-                <Heart className="h-4 w-4 sm:mr-2" />
-                <span className="hidden sm:inline">Favoris</span>
-                <span className="absolute -right-1 -top-1 inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-[var(--color-primary)] px-1.5 text-[10px] text-white sm:static sm:ml-3 sm:h-6 sm:min-w-6 sm:px-2 sm:text-xs">
+              <Button className="relative h-10 w-10 rounded-2xl px-0 sm:h-11 lg:w-11 lg:px-0 xl:w-auto xl:px-4" variant="secondary">
+                <Heart className="h-4 w-4 xl:mr-2" />
+                <span className="hidden xl:inline">Favoris</span>
+                <span className="absolute -right-1 -top-1 inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-[var(--color-primary)] px-1.5 text-[10px] text-white xl:static xl:ml-3 xl:h-6 xl:min-w-6 xl:px-2 xl:text-xs">
                   {wishlistCount}
                 </span>
               </Button>
             </Link>
             <Link href="/cart">
-              <Button className="relative h-10 w-10 rounded-2xl px-0 sm:h-11 sm:w-auto sm:px-4" variant="secondary">
-                <ShoppingBag className="h-4 w-4 sm:mr-2" />
-                <span className="hidden sm:inline">Panier</span>
-                <span className="absolute -right-1 -top-1 inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-[var(--color-primary)] px-1.5 text-[10px] text-white sm:static sm:ml-3 sm:h-6 sm:min-w-6 sm:px-2 sm:text-xs">
+              <Button className="relative h-10 w-10 rounded-2xl px-0 sm:h-11 lg:w-11 lg:px-0 xl:w-auto xl:px-4" variant="secondary">
+                <ShoppingBag className="h-4 w-4 xl:mr-2" />
+                <span className="hidden xl:inline">Panier</span>
+                <span className="absolute -right-1 -top-1 inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-[var(--color-primary)] px-1.5 text-[10px] text-white xl:static xl:ml-3 xl:h-6 xl:min-w-6 xl:px-2 xl:text-xs">
                   {itemCount}
                 </span>
               </Button>
             </Link>
             <Link href="/account">
-              <Button className="h-10 w-10 rounded-2xl px-0 sm:h-11 sm:w-auto sm:px-4" variant="secondary">
-                <User className="h-4 w-4 sm:mr-2" />
-                <span className="hidden sm:inline">Compte</span>
+              <Button className="h-10 w-10 rounded-2xl px-0 sm:h-11 lg:w-11 lg:px-0 xl:w-auto xl:px-4" variant="secondary">
+                <User className="h-4 w-4 xl:mr-2" />
+                <span className="hidden xl:inline">Compte</span>
               </Button>
             </Link>
             <button
               aria-expanded={isMobileMenuOpen}
               aria-label={isMobileMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
-              className="flex h-10 w-10 items-center justify-center rounded-2xl border border-slate-200 bg-white md:hidden"
+              className="flex h-10 w-10 items-center justify-center rounded-2xl border border-slate-200 bg-white lg:hidden"
               onClick={() => setIsMobileMenuOpen((value) => !value)}
               type="button"
             >
@@ -97,7 +97,7 @@ export function SiteHeader() {
 
         <div
           className={cn(
-            "grid overflow-hidden transition-[grid-template-rows,opacity,margin] duration-300 md:hidden",
+            "grid overflow-hidden transition-[grid-template-rows,opacity,margin] duration-300 lg:hidden",
             isMobileMenuOpen ? "mt-4 grid-rows-[1fr] opacity-100" : "mt-0 grid-rows-[0fr] opacity-0",
           )}
         >

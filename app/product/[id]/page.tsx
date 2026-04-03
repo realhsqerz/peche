@@ -23,25 +23,25 @@ export default async function ProductPage({
 
   return (
     <StoreShell>
-      <Container className="grid gap-10 py-10 lg:grid-cols-[1fr_0.95fr] lg:py-16">
-        <div className="relative min-h-[420px] overflow-hidden rounded-[2.5rem] shadow-[0_45px_120px_-60px_rgba(11,60,93,0.75)]">
+      <Container className="grid gap-8 py-10 xl:grid-cols-[1fr_0.95fr] xl:gap-10 xl:py-16">
+        <div className="relative min-h-[320px] overflow-hidden rounded-[2rem] shadow-[0_45px_120px_-60px_rgba(11,60,93,0.75)] sm:min-h-[420px] sm:rounded-[2.5rem]">
           <Image
             alt={product.name}
             className="object-cover"
             fill
             priority
-            sizes="(max-width: 1024px) 100vw, 50vw"
+            sizes="(max-width: 1279px) 100vw, 50vw"
             src={product.imageUrl}
           />
         </div>
         <div>
           <Badge>{product.category}</Badge>
-          <h1 className="mt-5 font-serif text-5xl leading-none text-[var(--color-primary)]">
+          <h1 className="mt-5 font-serif text-4xl leading-none text-[var(--color-primary)] sm:text-5xl">
             {product.name}
           </h1>
           <p className="mt-5 text-base leading-8 text-slate-600">{product.description}</p>
-          <div className="mt-8 flex items-end gap-4">
-            <span className="text-4xl font-semibold text-[var(--color-text)]">
+          <div className="mt-8 flex flex-wrap items-end gap-3 sm:gap-4">
+            <span className="text-3xl font-semibold text-[var(--color-text)] sm:text-4xl">
               {formatCurrency(product.price)}
             </span>
             <span className="pb-1 text-sm text-slate-500">{product.stock} units available</span>

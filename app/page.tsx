@@ -43,7 +43,7 @@ export default async function HomePage() {
   return (
     <StoreShell>
       <section className="relative overflow-hidden pb-10 pt-8 sm:pb-16 sm:pt-14">
-        <Container className="grid items-center gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10">
+        <Container className="grid items-center gap-8 xl:grid-cols-[1.05fr_0.95fr] xl:gap-10">
           <div>
             <Badge>Materiel cotier pour pecheurs du quotidien</Badge>
             <h1 className="mt-5 max-w-3xl font-serif text-4xl leading-none font-extrabold text-[var(--color-primary)] sm:mt-6 sm:text-6xl lg:text-7xl">
