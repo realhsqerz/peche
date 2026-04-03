@@ -27,25 +27,25 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-[rgba(21,91,115,0.08)] bg-[rgba(247,251,251,0.84)] backdrop-blur-xl">
       <Container className="py-3 md:h-20 md:py-0">
-        <div className="flex items-center justify-between gap-3">
+        <div className="flex items-center justify-between gap-3 md:grid md:h-full md:grid-cols-[auto_1fr_auto] md:items-center md:gap-8">
           <Link className="flex min-w-0 items-center gap-3" href="/">
             <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[1.2rem] bg-[linear-gradient(145deg,#1c7088,#4ca7ae)] text-white shadow-[0_18px_42px_-24px_rgba(21,91,115,0.55)] sm:h-12 sm:w-12 sm:rounded-[1.4rem]">
               <Waves className="h-5 w-5" />
             </div>
-            <div className="min-w-0">
-              <p className="truncate font-serif text-xl font-extrabold tracking-tight text-[var(--color-primary)] sm:text-2xl">
+            <div className="min-w-0 self-center">
+              <p className="truncate font-serif text-xl leading-none font-extrabold tracking-tight text-[var(--color-primary)] sm:text-2xl">
                 {siteConfig.name}
               </p>
-              <p className="hidden text-xs uppercase tracking-[0.3em] text-teal-700/65 sm:block">
+              <p className="mt-1 hidden text-xs leading-none uppercase tracking-[0.3em] text-teal-700/65 sm:block">
                 Peche Cotiere
               </p>
             </div>
           </Link>
 
-          <nav className="hidden items-center gap-7 md:flex">
+          <nav className="hidden items-center justify-center gap-7 md:flex">
             {links.map((link) => (
               <Link
-                className="text-sm font-semibold text-slate-600 transition hover:text-[var(--color-primary)]"
+                className="inline-flex h-11 items-center text-sm font-semibold text-slate-600 transition hover:text-[var(--color-primary)]"
                 href={link.href}
                 key={link.href}
               >
@@ -54,7 +54,7 @@ export function SiteHeader() {
             ))}
           </nav>
 
-          <div className="flex items-center gap-2 sm:gap-3">
+          <div className="flex items-center justify-self-end gap-2 sm:gap-3">
             <Link href="/wishlist">
               <Button className="relative h-10 w-10 rounded-2xl px-0 sm:h-11 sm:w-auto sm:px-4" variant="secondary">
                 <Heart className="h-4 w-4 sm:mr-2" />
